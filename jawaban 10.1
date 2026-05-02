@@ -1,0 +1,11 @@
+def cari_tiga_terbaik(angka_list):
+    angka_list.sort(reverse=True)
+    tiga_terbaik = angka_list[:3]
+    
+    return tiga_terbaik
+
+    daftar_nilai = [45, 89, 20, 100, 75, 60, 95]
+    hasil = cari_tiga_terbaik(daftar_nilai)
+
+print(f"List awal: {"daftar_nilai"}")
+print(f"3 Bilangan terbaik: {"hasil"}")
