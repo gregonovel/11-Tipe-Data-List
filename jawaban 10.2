@@ -1,0 +1,24 @@
+def hitung_rata_rata():
+    daftar_angka = []
+
+    while True:
+        input_user = input("Masukkan bilangan (atau ketik 'done' untuk selesai): ")
+
+        
+        if input_user.lower() == 'done':
+            break
+        try:
+            bilangan = float(input_user)
+            daftar_angka.append(bilangan)
+        except ValueError:
+            print("Input tidak valid! Masukkan angka atau kata 'done'.")
+
+    if len(daftar_angka) > 0:
+        rata_rata = sum(daftar_angka) / len(daftar_angka)
+        print("-" * 30)
+        print(f"Daftar bilangan: {daftar_angka}")
+        print(f"Rata-ratanya adalah: {rata_rata}")
+    else:
+        print("Tidak ada angka yang dimasukkan.")
+
+hitung_rata_rata()
